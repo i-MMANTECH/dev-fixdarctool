@@ -3,7 +3,10 @@ import { createWeb3Modal } from '@web3modal/wagmi/react'
 import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
 
 import { WagmiProvider } from 'wagmi'
-import { arbitrum, mainnet, polygon,bsc,bscTestnet,polygonMumbai } from 'wagmi/chains'
+import { arbitrum, mainnet, polygon,bsc,bscTestnet,polygonMumbai, polygonZkEvm, dogechain, bitTorrent,
+   bitTorrentTestnet, opBNB, opBNBTestnet, aurora, auroraTestnet, avalanche, optimism, thunderTestnet,
+   taraxaTestnet, base, linea, etherlinkTestnet, eos, 
+   telos} from 'wagmi/chains'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactNode } from 'react'
 
@@ -21,7 +24,10 @@ const metadata = {
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
 
-const chains = [arbitrum, mainnet, polygon,bsc,bscTestnet,polygonMumbai] as const
+const chains = [arbitrum, mainnet, polygon,etherlinkTestnet,bsc,bscTestnet,polygonMumbai,
+   polygonZkEvm, dogechain, bitTorrent, telos, bitTorrentTestnet, opBNB, opBNBTestnet,
+    aurora, auroraTestnet, avalanche, optimism, thunderTestnet, taraxaTestnet, base, 
+    linea, eos] as const
 const config = defaultWagmiConfig({
   chains,
   projectId,
